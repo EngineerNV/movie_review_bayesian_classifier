@@ -1,0 +1,16 @@
+---------------------------------------------
+Total Fresh Words:29 Total Fresh Probability:64444.444444444445
+---------------------------------------------
+Fresh Word Data:
+word:b'b' count:5 probability:17241.37931034483
+word:b'a' count:24 probability:82758.62068965517
+---------------------------------------------
+Total Rotten Words:16 Total Rotten Probability:35555.555555555555
+---------------------------------------------
+Rotten Word Data:
+word:b'b' count:5 probability:31250.0
+word:b'c' count:11 probability:68750.0
+---------------------------------------------
+Probability of Review being Fresh:91954022988505.77
+Probability of Review being Rotten:1111111111.1111112
+The review is Fresh
