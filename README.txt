@@ -36,5 +36,46 @@ if you want to print to a text file
 
 python mainBay.py -f example_fresh.txt -r example_rotten.txt -t test_ex_fresh.txt >output.txt
 
-Side note: the files with the words copy in it are the original files that have never been formated, 
+Side note: the files with the words copy in it are the original files that have never been formated,
 the current text files have gone through my remove format function before
+
+------------------------------------------------------------
+
+Movie Review Mood Arcade (FastAPI + React)
+==========================================
+
+This project now ships with an optional full-stack playground that wraps the
+classic Naive Bayes classifier in a colourful interface.
+
+Backend (FastAPI)
+-----------------
+
+* Location: `backend/app`
+* Install dependencies: `python -m venv .venv && source .venv/bin/activate && pip install -r backend/requirements.txt`
+* Launch locally: `uvicorn app.main:app --reload`
+* Helpful endpoints:
+  * `GET /ping` health check
+  * `POST /train` to retrain the classifier. Accepts optional custom snippets and
+    Laplace smoothing value.
+  * `POST /classify` to score a free-form review and return fresh/rotten probabilities.
+
+Frontend (React + Vite + TypeScript)
+------------------------------------
+
+* Location: `frontend`
+* Copy `.env.example` to `.env` and tweak `VITE_API_BASE_URL` if the backend runs
+  on a custom host/port.
+* Install dependencies: `npm install`
+* Start the development server: `npm run dev`
+* Build for production: `npm run build`
+
+Fun tour of the interface:
+
+* **Home** – Explains the project lore and how the tabs fit together.
+* **Training Lab** – Mix your own fresh/rotten snippets, toggle smoothing, and
+  retrain the FastAPI service. Distinctive words are highlighted after training.
+* **Classifier Arcade** – Paste any movie review to see a probability duel and a
+  running history of verdicts.
+
+Feel free to keep using the original CLI workflow (`mainBay.py`) if you prefer –
+both experiences co-exist happily.
